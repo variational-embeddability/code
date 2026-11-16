@@ -8,6 +8,8 @@ Each panel overlays fixed-time and jump-time estimates from the same sample,
 alongside the true rate. Both solvers fit only birth and death rates.
 The chamber volumes are V_A(t)=exp(-t) and V_B(t)=1 on [0, 1].
 The fixed-time observation count equals jump_frequency.
+Defaults match the manuscript caption: mu0=1e-3, mu1=3, K=190, rho=6.
+The example uses 1000 independent chains and seed 1008.
 """
 
 import argparse
@@ -34,8 +36,8 @@ def main():
     parser.add_argument('--num-intervals', type=int, default=190)
     parser.add_argument('--max-iter', type=int, default=5000)
     parser.add_argument('--seed', type=int, default=1008)
-    parser.add_argument("--mu0", type=float, default=1., help="Generator magnitude penalty weight")
-    parser.add_argument("--mu1", type=float, default=1., help="Generator derivative penalty weight")
+    parser.add_argument("--mu0", type=float, default=1e-3, help="Generator magnitude penalty weight (paper: 0.001)")
+    parser.add_argument("--mu1", type=float, default=3., help="Generator derivative penalty weight (paper: 3)")
     args = parser.parse_args()
     if not args.plot_only:
         generate_data(num_particles=5, jump_frequency=args.jump_frequency,
