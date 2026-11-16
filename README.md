@@ -1,5 +1,7 @@
 # Variational generator estimation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24275762.svg)](https://doi.org/10.5281/zenodo.24275762)
+
 ## Setup
 
 ```sh
@@ -20,3 +22,13 @@ The separate Ehrenfest MISE comparison is an additional experiment.
 ```sh
 MPLBACKEND=Agg python -m unittest discover -s tests -v
 ```
+
+## Citation and archived release
+
+Release **v1.2** is archived on Zenodo:
+[10.5281/zenodo.24275762](https://doi.org/10.5281/zenodo.24275762).
+Use this version-specific DOI when citing this release. The current development
+version is maintained at [variational-embeddability/code](https://github.com/variational-embeddability/code).
+
+The code authors are **George Henderson-Walshe, Rua Murray and Philipp Wacker**.
+The archived release is distributed under the MIT licence.
